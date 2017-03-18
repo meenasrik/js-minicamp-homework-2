@@ -62,7 +62,6 @@ function isPrime(num) {
   //note: 0 and 1 are NOT considered prime numbers
     
     if (num === 0 || num === 1) return false;
-    else if (num === 2) return true;
     else {
         for (var i=2; i<num; i++) {
             if (num%i === 0) return false;
@@ -116,11 +115,7 @@ function wordsToSentence(words) {
   //return a string that is all of the words concatenated together
   //spaces need to be between each word
   //example: ['Hello', 'world!'] -> 'Hello world!'
-    var sentence = words[0];
-    for (var i=1; i<words.length; i++) {
-        sentence += ' ' + words[i];
-    } // end for
-    return sentence;
+    return words.join(' ');
 }
 
 function contains(arr, item) {
